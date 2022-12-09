@@ -14,11 +14,10 @@
 - [x] resilience4j (https://www.baeldung.com/resilience4j) LOW PRIORITY
   - circuit breakers
   - bulk head
+- [x] auth server (spring clound security OAuth2 JWT)
+
 
 ### falta
-
-
-- auth server (spring clound security OAuth2 JWT)
  
 - create docker and docker compose
   - https://spring.io/guides/gs/spring-boot-docker/
