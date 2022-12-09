@@ -11,15 +11,12 @@
 
 - [x] config server(https://spring.io/projects/spring-cloud-config)
 
+- [x] resilience4j (https://www.baeldung.com/resilience4j) LOW PRIORITY
+  - circuit breakers
+  - bulk head
+
 ### falta
 
-- resilience4j (https://www.baeldung.com/resilience4j) LOW PRIORITY
-    - circuit breakers
-    - bulk head
-
-- Serverless 
-
-- Monitoramento
 
 - auth server (spring clound security OAuth2 JWT)
  
@@ -29,6 +26,9 @@
 - 3 APLICAÇÕES STATICAS
 - 1 APLICAÇÃO COM DATA
 
+- [x] Monitoramento - Zipkin ver funcionando no docker
+- Serverless - perguntar se tenho q fazer?
+
 
 ### observação
 
@@ -36,3 +36,10 @@
 
 ### links
   https://start.spring.io/
+
+`lsof -i tcp:8080 /  
+  sudo kill -9 27871 `
+
+colima start
+docker run -d -p 9411:9411 openzipkin/zipkin
+
