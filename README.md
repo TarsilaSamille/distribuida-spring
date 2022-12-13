@@ -22,8 +22,8 @@
 - create docker and docker compose
   - https://spring.io/guides/gs/spring-boot-docker/
 
-- 3 APLICAÇÕES STATICAS
-- 1 APLICAÇÃO COM DATA
+senha secreta ?
+
 
 - [x] Monitoramento - Zipkin ver funcionando no docker
 - Serverless - perguntar se tenho q fazer?
@@ -37,8 +37,19 @@
   https://start.spring.io/
 
 `lsof -i tcp:8080 /  
-  sudo kill -9 27871 `
+  sudo kill -9 12191 `
 
 colima start
-docker run -d -p 9411:9411 openzipkin/zipkin
 
+docker ps -aq | xargs docker rm -f
+
+docker-compose build
+docker-compose up --remove-orphans
+
+eureka-naming-server
+service-gateway-API
+alfa
+beta
+limits-service
+oauth-authorization-server-jws-jwk-legacy
+oauth-resource-server-jws-jwk-legacy

@@ -1,62 +1,9 @@
 spring:
   application:
     name: alfa
-  cloud:
-    loadbalancer:
-      ribbon:
-        enabled: false
+  profiles:
+    active: dev
+  config:
+    import: configserver:http://localhost:8888
 server:
   port: 8002
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
-management.health.circuitbreakers.enabled: true
-management.endpoint.health:
-  enabled: true
-  show-details: always
-
-resilience4j:
-  bulkhead:
-    instances:
-      beta:
-        maxConcurrentCalls: 20
-        maxWaitDuration: 2ms
-  thread-pool-bulkhead:
-    instances:
-      beta:
-        maxThreadPoolSize: 1
-        coreThreadPoolSize: 1
-        queueCapacity: 1
-  circuitbreaker:
-    configs:
-      default:
-        registerHealthIndicator: true
-    instances:
-      beta:
-        registerHealthIndicator: true
-        ringBufferSizeInHalfOpenState: 3
-        waitDurationInOpenState: 10s
-        ringBufferSizeInClosedState: 5
-        failureRateThreshold: 50
-        recordExceptions:
-          - java.io.IOException
-          - org.springframework.web.client.HttpServer ErrorException
-          - java.util.concurrent.TimeoutException
-          - org.springframework.web.client.ResourceAccessException
-  retry:
-    instances:
-      beta:
-        maxRetryAttempts: 6
-        waitDuration: 1s
-        enableExponentialBackoff: true
-        exponentialBackoffMultiplier: 2
-        retry-exeptions:
-          - java.util.concurrent.TimeoutExeption
-          - java.net.ConnectExeption
