@@ -3,31 +3,31 @@
 
 ### done
 
-- [x] Spring Discovery Service (https://spring.io/guides/gs/service-registration-and-discovery/)
-- [x] load balancer (https://spring.io/guides/gs/spring-cloud-loadbalancer/)
+Bom dia,
 
-- [x] api gateway ([https://spring.io/projects/spring-cloud-gateway](https://spring.io/projects/spring-cloud-gateway))
-- [x] eureka (spring clound discovery)
+Seguem os critérios para avaliação dos trabalhos da terceira unidade:
 
-- [x] config server(https://spring.io/projects/spring-cloud-config)
+1 - Usar o JMeter para invocar os 3 microserviços de negócio (2.0)
 
-- [x] resilience4j (https://www.baeldung.com/resilience4j) LOW PRIORITY
-  - circuit breakers
-  - bulk head
-- [x] auth server (spring clound security OAuth2 JWT)
+OK – Usar o Config Server em todos os microserviços do projeto (1.0)
 
+OK – Usar o Discovery Service com registro dos microserviços do projetos (0.5)
 
-### falta
- 
-- create docker and docker compose
-  - https://spring.io/guides/gs/spring-boot-docker/
+OK – Implementar Loadbalance no Gateway(0.5) e chamadas RestTemplate(0.5)
 
-senha secreta ?
+OK  – Implementar Declarative Client (OpenFeign) (1.0)
 
+OK – Implementar o padrão Gateway (1.0)
 
-- [x] Monitoramento - Zipkin ver funcionando no docker
-- Serverless - perguntar se tenho q fazer?
+OK – Implementar as várias estratégias do Resilience4J
+            CircutiBreak: 0.8
+            Fallback: 0.2
+            Bulkhead:0.5
+            Retry: 0.5
 
+OK – Implementar serviço serverless (1.0)
+
+9 – Implementar monitoramento (0.5)
 
 ### observação
 
@@ -36,8 +36,8 @@ senha secreta ?
 ### links
   https://start.spring.io/
 
-`lsof -i tcp:8080 /  
-  sudo kill -9 12191 `
+`lsof -i tcp:8761 /  
+  sudo kill -9 16881 `
 
 colima start
 

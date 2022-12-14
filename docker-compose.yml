@@ -7,15 +7,15 @@ services:
       - spring-postgres
     links:
       - spring-clound-config-server
-  service-gateway-api:
-    build: service-gateway-API
-    ports:
-      - 8080:8080
-    networks:
-      - spring-postgres
-    links:
-      - spring-clound-config-server
-      - eureka-naming-server
+#  service-gateway-api:
+#    build: service-gateway-API
+#    ports:
+#      - 8080:8080
+#    networks:
+#      - spring-postgres
+#    links:
+#      - spring-clound-config-server
+#      - eureka-naming-server
   spring-clound-config-server:
     build: spring-clound-config-server
     ports:
@@ -28,10 +28,8 @@ services:
       - 8002:8002
     networks:
       - spring-postgres
-    links:
-      - spring-clound-config-server
-      - eureka-naming-server
-      - service-gateway-api
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://localhost:8761/eureka
 #  beta:
 #    build: services/beta
 #    ports:
