@@ -53,3 +53,7 @@ beta
 limits-service
 oauth-authorization-server-jws-jwk-legacy
 oauth-resource-server-jws-jwk-legacy
+
+
+curl -sSL https://zipkin.io/quickstart.sh | bash -s
+java -jar zipkin.jar
