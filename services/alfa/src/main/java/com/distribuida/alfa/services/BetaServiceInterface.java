@@ -13,6 +13,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Retry(name = "beta")
 @Bulkhead(name = "beta", type= Type.THREADPOOL)
 public interface BetaServiceInterface {
-    @RequestMapping(method = RequestMethod.GET, value = "/beta", consumes = "application/json")
-    String getData();
+    @RequestMapping(method = RequestMethod.GET, value = "/beta", consumes = "application/json") String getData();
 }
