@@ -16,7 +16,8 @@
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.0-RC2</spring-cloud.version>
-		<resilience4j.version>1.7.0</resilience4j.version>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>		<resilience4j.version>1.7.0</resilience4j.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -89,9 +90,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
+						<!--		<executions>
 					<execution>
-						<goals>
+              						<goals>
 							<goal>repackage</goal>
 						</goals>
 						<configuration>
@@ -101,7 +102,7 @@
 							</mainClass>
 						</configuration>
 					</execution>
-				</executions>
+				</executions>-->
 			</plugin>
 		</plugins>
 	</build>

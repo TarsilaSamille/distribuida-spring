@@ -7,7 +7,9 @@ Bom dia,
 
 Seguem os critérios para avaliação dos trabalhos da terceira unidade:
 
-1 - Usar o JMeter para invocar os 3 microserviços de negócio (2.0)
+OK - Usar o JMeter para invocar os 3 microserviços de negócio (2.0)
+
+open /usr/local/bin/jmeter
 
 OK – Usar o Config Server em todos os microserviços do projeto (1.0)
 
@@ -27,7 +29,8 @@ OK – Implementar as várias estratégias do Resilience4J
 
 OK – Implementar serviço serverless (1.0)
 
-9 – Implementar monitoramento (0.5)
+Ok – Implementar monitoramento ? (0.5)
+java -jar zipkin.jar
 
 ### observação
 

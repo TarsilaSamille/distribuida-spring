@@ -16,7 +16,8 @@
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.0-RC2</spring-cloud.version>
-	</properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -72,9 +73,9 @@
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>				<executions>
+				<artifactId>spring-boot-maven-plugin</artifactId>						<!--		<executions>
 					<execution>
-						<goals>
+              						<goals>
 							<goal>repackage</goal>
 						</goals>
 						<configuration>
@@ -84,7 +85,7 @@
 							</mainClass>
 						</configuration>
 					</execution>
-				</executions>
+				</executions>-->
 			</plugin>
 		</plugins>
 	</build>
